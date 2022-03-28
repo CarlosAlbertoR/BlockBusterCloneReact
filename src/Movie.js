@@ -2,16 +2,16 @@ function Movie(props) {
     const listDirectors = props.directors.split(",").map((dir, i) => {
         return (
             i !== props.directors.split(",").length - 1
-                ? <a href="#">{dir},</a>
-                : <a href="#">{dir}</a>
+                ? <a>{dir},</a>
+                : <a>{dir}</a>
         )
     })
 
     const listActors = props.actors.split(",").map((act, i) => {
         return (
             i !== props.actors.split(",").length - 1
-                ? <a href="#">{act},</a>
-                : <a href="#">{act}</a>
+                ? <a>{act},</a>
+                : <a>{act}</a>
         )
     })
 
