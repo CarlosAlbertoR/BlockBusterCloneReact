@@ -1,27 +1,14 @@
 import { React, useState } from 'react';
 import './App.css';
-import PageWrapper from './PageWrapper';
+import PageWrapper from './components/PageWrapper/PageWrapper';
 import Movie from './Movie';
 import Pagination from './Pagination';
 import moviesJson from './movies.json';
 
 function App() {
+  const [movies] = useState(moviesJson);
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesPerPage, setMoviesPerPage] = useState(5);
-
-  const movies = moviesJson;
-
-  // const searchMovies = async () => {
-  //   const url = 'https://data-develop-carlos.s3.amazonaws.com/movies.json';
-  //   movies = await fetch(url, {
-  //     method: 'GET',
-  //     headers: {
-  //       Accept: 'application/json',
-  //       'Content-Type': 'application/json'
-  //     }
-  //   });
-  //   console.log('movies', movies);
-  // };
 
   const loadMovies = () =>
     movies.slice(
@@ -29,7 +16,7 @@ function App() {
       (currentPage - 1) * moviesPerPage + moviesPerPage
     );
 
-  const getTotalPages = () => Math.ceil(moviesJson.length / moviesPerPage);
+  const getTotalPages = () => Math.ceil(movies.length / moviesPerPage);
 
   return (
     <PageWrapper>
