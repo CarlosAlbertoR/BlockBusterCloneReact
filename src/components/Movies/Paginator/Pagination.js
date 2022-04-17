@@ -1,12 +1,15 @@
 import React from 'react';
 
 function Pagination(props) {
+  const paginator = props;
+
   return (
     <div className="topbar-filter">
-      <label>Movies per page:</label>
+      Movies per page:
+      {/* <label>Movies per page:</label> */}
       <select
         onChange={(event) => {
-          props.onChangeItemsPerPage(event.target.value);
+          paginator.onChangeItemsPerPage(event.target.value);
         }}
       >
         <option value="5">5 Movies</option>
@@ -16,17 +19,18 @@ function Pagination(props) {
       </select>
       <div className="pagination2">
         <span>
-          Page {props.current} of {props.total}:
+          Page {paginator.current} of {paginator.total}:
         </span>
-        {Array.apply(0, Array(props.total)).map((item, i) => (
+        {Array.apply(0, Array(paginator.total)).map((item, i) => (
           <a
-            onClick={() => props.onChangePage(i + 1)}
-            className={i + 1 === props.current ? 'active' : 'pe-auto'}
+            onMouseEnter={() => paginator.onChangePage(i + 1)}
+            className={i + 1 === paginator.current ? 'active' : 'pe-auto'}
+            href="()"
           >
             {i + 1}
           </a>
         ))}
-        <a>
+        <a href="()">
           <i className="ion-arrow-right-b" />
         </a>
       </div>

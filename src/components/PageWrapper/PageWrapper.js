@@ -1,225 +1,17 @@
 import React from 'react';
 import Login from '../Login/Login/Login';
 import Signup from '../Login/Signup/Signup';
+import MovieList from '../Movies/MovieList';
+import Header from './Header/Header';
 import Preloader from './Preloader/Preloader';
 
-function PageWrapper(props) {
+function PageWrapper() {
   return (
     <div>
       <Preloader />
-
       <Login />
-
       <Signup />
-
-      <header className="ht-header">
-        <div className="container">
-          <nav className="navbar navbar-default navbar-custom">
-            <div className="navbar-header logo">
-              <div
-                className="navbar-toggle"
-                data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1"
-              >
-                <span className="sr-only">Toggle navigation</span>
-                <div id="nav-icon1">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-              <a href="index-2.html">
-                <img
-                  className="logo"
-                  src="images/logo1.png"
-                  alt=""
-                  width="119"
-                  height="58"
-                />
-              </a>
-            </div>
-
-            <div
-              className="collapse navbar-collapse flex-parent"
-              id="bs-example-navbar-collapse-1"
-            >
-              <ul className="nav navbar-nav flex-child-menu menu-left">
-                <li className="hidden">
-                  <a href="#page-top" />
-                </li>
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                  >
-                    Home <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="index-2.html">Home 01</a>
-                    </li>
-                    <li>
-                      <a href="homev2.html">Home 02</a>
-                    </li>
-                    <li>
-                      <a href="homev3.html">Home 03</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    movies
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li className="dropdown">
-                      <a
-                        href="#"
-                        className="dropdown-toggle"
-                        data-toggle="dropdown"
-                      >
-                        Movie grid
-                        <i className="ion-ios-arrow-forward" />
-                      </a>
-                      <ul className="dropdown-menu level2">
-                        <li>
-                          <a href="moviegrid.html">Movie grid</a>
-                        </li>
-                        <li>
-                          <a href="moviegridfw.html">movie grid full width</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="movielist.html">Movie list</a>
-                    </li>
-                    <li>
-                      <a href="moviesingle.html">Movie single</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="seriessingle.html">Series single</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    celebrities
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="celebritygrid01.html">celebrity grid 01</a>
-                    </li>
-                    <li>
-                      <a href="celebritygrid02.html">celebrity grid 02 </a>
-                    </li>
-                    <li>
-                      <a href="celebritylist.html">celebrity list</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="celebritysingle.html">celebrity single</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    news <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="bloglist.html">blog List</a>
-                    </li>
-                    <li>
-                      <a href="bloggrid.html">blog Grid</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="blogdetail.html">blog Detail</a>
-                    </li>
-                  </ul>
-                </li>
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    community{' '}
-                    <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="userfavoritegrid.html">user favorite grid</a>
-                    </li>
-                    <li>
-                      <a href="userfavoritelist.html">user favorite list</a>
-                    </li>
-                    <li>
-                      <a href="userprofile.html">user profile</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="userrate.html">user rate</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul className="nav navbar-nav flex-child-menu menu-right">
-                <li className="dropdown first">
-                  <a
-                    className="btn btn-default dropdown-toggle lv1"
-                    data-toggle="dropdown"
-                    data-hover="dropdown"
-                  >
-                    pages <i className="fa fa-angle-down" aria-hidden="true" />
-                  </a>
-                  <ul className="dropdown-menu level1">
-                    <li>
-                      <a href="landing.html">Landing</a>
-                    </li>
-                    <li>
-                      <a href="404.html">404 Page</a>
-                    </li>
-                    <li className="it-last">
-                      <a href="comingsoon.html">Coming soon</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Help</a>
-                </li>
-                <li className="loginLink">
-                  <a href="#">LOG In</a>
-                </li>
-                <li className="btn signupLink">
-                  <a href="#">sign up</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          <div className="top-search">
-            <select>
-              <option value="united">TV show</option>
-              <option value="saab">Others</option>
-            </select>
-            <input
-              type="text"
-              placeholder="Search for a movie, TV Show or celebrity that you are looking for"
-            />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <div className="hero common-hero">
         <div className="container">
@@ -229,7 +21,7 @@ function PageWrapper(props) {
                 <h1>movie listing - list</h1>
                 <ul className="breadcumb">
                   <li className="active">
-                    <a href="#">Home</a>
+                    <a href="http">Home</a>
                   </li>
                   <li>
                     <span className="ion-ios-arrow-right" /> movie listing
@@ -249,7 +41,8 @@ function PageWrapper(props) {
                 <p>
                   Found <span>1,608 movies</span> in total
                 </p>
-                <label>Sort by:</label>
+                Sort by:
+                {/* <label>Sort by:</label> */}
                 <select>
                   <option value="popularity">Popularity Descending</option>
                   <option value="popularity">Popularity Ascending</option>
@@ -266,7 +59,7 @@ function PageWrapper(props) {
                 </a>
               </div>
 
-              {props.children}
+              <MovieList />
             </div>
             <div className="col-md-4 col-sm-12 col-xs-12">
               <div className="sidebar">
@@ -275,11 +68,13 @@ function PageWrapper(props) {
                   <form className="form-style-1" action="#">
                     <div className="row">
                       <div className="col-md-12 form-it">
-                        <label>Movie name</label>
+                        Movie name
+                        {/* <label>Movie name</label> */}
                         <input type="text" placeholder="Enter keywords" />
                       </div>
                       <div className="col-md-12 form-it">
-                        <label>Genres & Subgenres</label>
+                        Genres & Subgenres
+                        {/* <label>Genres & Subgenres</label> */}
                         <div className="group-ip">
                           <select
                             name="skills"
@@ -296,8 +91,8 @@ function PageWrapper(props) {
                         </div>
                       </div>
                       <div className="col-md-12 form-it">
-                        <label>Rating Range</label>
-
+                        Rating Range
+                        {/* <label>Rating Range</label> */}
                         <select>
                           <option value="range">
                             -- Select the rating range below --
@@ -314,7 +109,8 @@ function PageWrapper(props) {
                         </select>
                       </div>
                       <div className="col-md-12 form-it">
-                        <label>Release Year</label>
+                        {/* <label>Release Year</label> */}
+                        Release Year
                         <div className="row">
                           <div className="col-md-6">
                             <select>
@@ -353,6 +149,7 @@ function PageWrapper(props) {
                     src="#"
                     data-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftemplatespoint.net%2F%3Ffref%3Dts&tabs=timeline&width=340&height=315px&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId"
                     height="315"
+                    title="unique-title-test"
                   />
                 </div>
                 <div className="sb-twitter sb-it">
@@ -381,29 +178,29 @@ function PageWrapper(props) {
                 New York, NY 10001
               </p>
               <p>
-                Call us: <a href="#">(+01) 202 342 6789</a>
+                Call us: <a href="http">(+01) 202 342 6789</a>
               </p>
             </div>
             <div className="flex-child-ft item2">
               <h4>Resources</h4>
               <ul>
                 <li>
-                  <a href="#">About</a>
+                  <a href="http">About</a>
                 </li>
                 <li>
-                  <a href="#">Blockbuster</a>
+                  <a href="http">Blockbuster</a>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <a href="http">Contact Us</a>
                 </li>
                 <li>
-                  <a href="#">Forums</a>
+                  <a href="http">Forums</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="http">Blog</a>
                 </li>
                 <li>
-                  <a href="#">Help Center</a>
+                  <a href="http">Help Center</a>
                 </li>
               </ul>
             </div>
@@ -411,13 +208,13 @@ function PageWrapper(props) {
               <h4>Legal</h4>
               <ul>
                 <li>
-                  <a href="#">Terms of Use</a>
+                  <a href="http">Terms of Use</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="http">Privacy Policy</a>
                 </li>
                 <li>
-                  <a href="#">Security</a>
+                  <a href="http">Security</a>
                 </li>
               </ul>
             </div>
@@ -425,16 +222,16 @@ function PageWrapper(props) {
               <h4>Account</h4>
               <ul>
                 <li>
-                  <a href="#">My Account</a>
+                  <a href="http">My Account</a>
                 </li>
                 <li>
-                  <a href="#">Watchlist</a>
+                  <a href="http">Watchlist</a>
                 </li>
                 <li>
-                  <a href="#">Collections</a>
+                  <a href="http">Collections</a>
                 </li>
                 <li>
-                  <a href="#">User Guide</a>
+                  <a href="http">User Guide</a>
                 </li>
               </ul>
             </div>
@@ -444,10 +241,10 @@ function PageWrapper(props) {
                 Subscribe to our newsletter system now <br />
                 to get latest news from us.
               </p>
-              <form action="#">
+              <form action="http">
                 <input type="text" placeholder="Enter your email..." />
               </form>
-              <a href="#" className="btn">
+              <a href="http" className="btn">
                 Subscribe now <i className="ion-ios-arrow-forward" />
               </a>
             </div>
@@ -467,7 +264,7 @@ function PageWrapper(props) {
           </div>
           <div className="backtotop">
             <p>
-              <a href="#" id="back-to-top">
+              <a href="http" id="back-to-top">
                 Back to top <i className="ion-ios-arrow-thin-up" />
               </a>
             </p>

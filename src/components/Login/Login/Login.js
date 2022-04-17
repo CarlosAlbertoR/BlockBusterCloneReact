@@ -4,7 +4,7 @@ function Login() {
   return (
     <div className="login-wrapper" id="login-content">
       <div className="login-content">
-        <a href="#" className="close">
+        <a href="http" className="close">
           x
         </a>
         <h3>Login</h3>
@@ -42,7 +42,7 @@ function Login() {
                 <input type="checkbox" name="remember" value="Remember me" />
                 <span>Remember me</span>
               </div>
-              <a href="#">Forget password ?</a>
+              <a href="http">Forget password ?</a>
             </div>
           </div>
           <div className="row">
@@ -52,11 +52,11 @@ function Login() {
         <div className="row">
           <p>Or via social</p>
           <div className="social-btn-2">
-            <a className="fb" href="#">
+            <a className="fb" href="http">
               <i className="ion-social-facebook" />
               Facebook
             </a>
-            <a className="tw" href="#">
+            <a className="tw" href="http">
               <i className="ion-social-twitter" />
               twitter
             </a>

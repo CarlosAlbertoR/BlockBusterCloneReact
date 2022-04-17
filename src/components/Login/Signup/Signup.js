@@ -4,7 +4,7 @@ function Signup() {
   return (
     <div className="login-wrapper" id="signup-content">
       <div className="login-content">
-        <a href="#" className="close">
+        <a href="http" className="close">
           x
         </a>
         <h3>sign up</h3>
