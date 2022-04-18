@@ -1,6 +1,7 @@
 import React from 'react';
+import Moment from 'react-moment';
 
-function Movie(props) {
+function MovieFullCard(props) {
   const movie = props;
 
   const listDirectors = movie.directors
@@ -33,7 +34,10 @@ function Movie(props) {
       <div className="mv-item-infor">
         <h6>
           <a href="moviesingle.html">
-            {movie.title} <span>({movie.year})</span>
+            {movie.title}{' '}
+            <span>
+              (<Moment date={movie.release} format="YYYY" />)
+            </span>
           </a>
         </h6>
         <p className="rate">
@@ -43,7 +47,9 @@ function Movie(props) {
         <p className="describe">{movie.children}</p>
         <p className="run-time">
           Run Time: {movie.runTime} . <span>MMPA: {movie.mmpa} </span> .
-          <span>Release: {movie.release}</span>
+          <span>
+            Release: <Moment date={movie.release} format="MMM Do YY" />
+          </span>
         </p>
         <p>Director: {listDirectors}</p>
 
@@ -56,4 +62,4 @@ function Movie(props) {
   );
 }
 
-export default Movie;
+export default MovieFullCard;
